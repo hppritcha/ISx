@@ -1,10 +1,11 @@
 CC = cc
 LD = $(CC)
 DEBUGFLAGS = -g -p -O0 -DDEBUG
-OPTFLAGS = -O3 -DNDEBUG -mavx
-CFLAGS += -Wall -Wextra -std=c99 #$(OPTFLAGS)
+#OPTFLAGS = -O3 -DNDEBUG -dynamic
+OPTFLAGS = -O3 -DNDEBUG 
+CFLAGS += -Wall -Wextra -std=c99 $(OPTFLAGS)
 LDLIBS += -lrt -lm
-LDFLAGS += 
+LDFLAGS += -dynamic
 ### 
 # If you change these values, you must also change them in params.h
 STRONG = 1
